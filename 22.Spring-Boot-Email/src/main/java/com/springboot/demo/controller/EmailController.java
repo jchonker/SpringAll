@@ -31,9 +31,10 @@ public class EmailController {
 	@RequestMapping("sendSimpleEmail")
 	public String sendSimpleEmail() {
 		try {
+			System.out.println("进入sendSimpleEmail流程");
 			SimpleMailMessage message = new SimpleMailMessage();
 			message.setFrom(from);
-			message.setTo("888888@qq.com"); // 接收地址
+			message.setTo("1843301926@qq.com"); // 接收地址
 			message.setSubject("一封简单的邮件"); // 标题
 			message.setText("使用Spring Boot发送简单邮件。"); // 内容
 			jms.send(message);
@@ -48,10 +49,11 @@ public class EmailController {
 	public String sendHtmlEmail() {
 		MimeMessage message = null;
 		try {
+			System.out.println("进入sendHtmlEmail流程");
 			message = jms.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(message, true);
 			helper.setFrom(from); 
-			helper.setTo("888888@qq.com"); // 接收地址
+			helper.setTo("1843301926@qq.com"); // 接收地址
 			helper.setSubject("一封HTML格式的邮件"); // 标题
 			// 带HTML格式的内容
 			StringBuffer sb = new StringBuffer("<p style='color:#42b983'>使用Spring Boot发送HTML格式邮件。</p>");
@@ -68,10 +70,11 @@ public class EmailController {
 	public String sendAttachmentsMail() {
 		MimeMessage message = null;
 		try {
+			System.out.println("进入sendAttachmentsMail流程");
 			message = jms.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(message, true);
 			helper.setFrom(from); 
-			helper.setTo("888888@qq.com"); // 接收地址
+			helper.setTo("1843301926@qq.com"); // 接收地址
 			helper.setSubject("一封带附件的邮件"); // 标题
 			helper.setText("详情参见附件内容！"); // 内容
 			// 传入附件
@@ -89,10 +92,11 @@ public class EmailController {
 	public String sendInlineMail() {
 		MimeMessage message = null;
 		try {
+			System.out.println("进入sendInlineMail流程");
 			message = jms.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(message, true);
 			helper.setFrom(from); 
-			helper.setTo("888888@qq.com"); // 接收地址
+			helper.setTo("1843301926@qq.com"); // 接收地址
 			helper.setSubject("一封带静态资源的邮件"); // 标题
 			helper.setText("<html><body>博客图：<img src='cid:img'/></body></html>", true); // 内容
 			// 传入附件
@@ -110,10 +114,11 @@ public class EmailController {
 	public String sendTemplateEmail(String code) {
 		MimeMessage message = null;
 		try {
+			System.out.println("进入sendTemplateEmail流程");
 			message = jms.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(message, true);
 			helper.setFrom(from); 
-			helper.setTo("888888@qq.com"); // 接收地址
+			helper.setTo("1843301926@qq.com"); // 接收地址
 			helper.setSubject("邮件摸板测试"); // 标题
 			// 处理邮件模板
 		    Context context = new Context();

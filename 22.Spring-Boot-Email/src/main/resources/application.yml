@@ -3,9 +3,9 @@ server:
 
 spring:
   mail:
-    host: smtp.163.com
-    username: xxxx@163.com
-    password: xxxx
+    host: smtp.163.com   #163邮箱默认主机不可修改
+    username: jchonker@163.com  #邮箱名,要带后缀@163.com
+    password: jchonker123   #使用SMTP的授权码作为密码
     properties:
       mail:
         smtp:
