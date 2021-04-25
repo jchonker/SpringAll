@@ -1,0 +1,7 @@
+#自定义用户名和密码
+spring:
+  security:
+    user:
+      name: jchonker
+      password: 123456
+      roles: admin

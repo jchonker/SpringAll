@@ -5,8 +5,8 @@ server:
 spring:
   mail:
     host: smtp.163.com
-    username: xxx@163.com
-    password: xxx
+    username: jchonker@163.com
+    password: jchonker123
     properties:
       mail:
         smtp:
@@ -19,5 +19,5 @@ spring:
     admin:
       notify:
         mail:
-          from: xxx@163.com
-          to: xxx@qq.com
+          from: jchonker@163.com
+          to: 1843301926@qq.com

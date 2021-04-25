@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import de.codecentric.boot.admin.config.EnableAdminServer;
 
 @SpringBootApplication
-@EnableAutoConfiguration
+//@EnableAutoConfiguration
 @EnableAdminServer
 public class DemoApplication {
 

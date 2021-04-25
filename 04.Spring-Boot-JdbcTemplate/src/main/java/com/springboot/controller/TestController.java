@@ -40,4 +40,14 @@ public class TestController {
 	public int deleteStudentBySno(String sno) {
 		return this.studentService.deleteBysno(sno);
 	}
+
+	//增加修改
+	@RequestMapping(value = "updatestudent",method = RequestMethod.GET)
+	public int updateStudent(String sno,String name,String sex){
+		Student student = new Student();
+		student.setSno(sno);
+		student.setName(name);
+		student.setSex(sex);
+		return this.studentService.update(student);
+	}
 }
